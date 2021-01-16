@@ -1,4 +1,4 @@
-q.no:1
+q.no:1-DFS TRAVERSAL
 class Solution
 { 
     public ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj)
