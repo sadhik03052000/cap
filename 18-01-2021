@@ -29,3 +29,30 @@ class Solution {
         dfs(grid,i,j-1);
     }
 }
+
+QUESTION:-FLOOD FILL
+
+class Solution {
+    int row;
+    int start;
+    int col;
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        row = image.length;
+        col = image[0].length;
+        start = image[sr][sc];
+        if(start!=newColor){
+            dfs(image,sr,sc,newColor);
+        }
+    return image;
+    }
+    public void dfs(int[][] image,int i,int j,int newColor){
+        if(i<0 || i>=row || j<0 || j>=col || image[i][j]!=start){
+            return;
+        }
+        image[i][j] = newColor;
+        dfs(image,i+1,j,newColor);
+        dfs(image,i-1,j,newColor);
+        dfs(image,i,j+1,newColor);
+        dfs(image,i,j-1,newColor);
+    }
+}
